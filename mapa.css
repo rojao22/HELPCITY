@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background: #06133A;
+    color: white;
+    min-height: 100vh;
+}
+
+header{
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #0ea5e9, #2563eb);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+}
+
+nav{
+    display: flex;
+    gap: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #DDE8FF;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #29B6FF;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #29B6FF;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+section{
+    padding: 70px 8%;
+}
+
+section h2{
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 45px;
+}
+
+.mapa-box{
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(145deg, #0B1C52, #132C73);
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #CFE6FF;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.mapa-box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(41,182,255,0.25);
+    border-color: rgba(41,182,255,0.4);
+}
+footer{
+    background: linear-gradient(90deg, #0ea5e9, #2563eb);
+    padding: 25px;
+    text-align: center;
+    color: #dfe4eb;
+    border-top:7px solid #0e2556;
+}
+
+@media(max-width: 900px){
+
+    header{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header h1{
+        font-size: 28px;
+    }
+
+    nav{
+        gap: 14px;
+    }
+
+    nav a{
+        font-size: 15px;
+    }
+
+    section h2{
+        font-size: 2.2rem;
+    }
+
+    .mapa-box{
+        height: 400px;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 20px;
+    }
+
+}
